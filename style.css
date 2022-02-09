@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*header section start*/
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+}
+
+nav {
+    background-color: #000;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    border: 2px;
+}
+
+a.active,
+a:hover {
+    background: #1b9;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media(max-width:952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+
+
+/*header section end*/
+
+
+/*banner section start*/
+
+.baneer-section {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 10px;
+    height: 400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 1300px 395px;
+}
+
+.baneer-section h1 {
+    font-size: 50px;
+    color: rgb(199, 196, 196);
+    
+}
+
+
+
+/* baneer section end */
+
+
+/* about section start */
+
+.about-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 1px;
+}
+
+.class1 {
+    text-align: center;
+    color: green;
+    background-color: greenyellow;
+    grid-column: 1/4;
+    padding: 5px;
+}
+
+.about-content {
+    background-color:beige;
+    color: rgb(14, 12, 12);
+    
+   
+}
+
+
+
+
+/* about section end */
+
+
+/* grid start */
+
+main {
+    margin: 10px auto;
+    border: 1px solid blue;
+    display: grid;
+    grid-template-rows: 60px 100px 200px 60px;
+    grid-template-columns: repeat(3, 1fr) 150px;
+    grid-gap: 10px;
+}
+
+.div1 {
+    background-color: red;
+    grid-column: 1/-1;
+}
+
+.div2 {
+    background-color: green;
+}
+
+.div3 {
+    background-color: lightseagreen;
+}
+
+.div4 {
+    background-color: violet;
+}
+
+.div5 {
+    background-color: rgb(109, 89, 89);
+    grid-row: 2/4;
+    grid-column: 4/5;
+}
+
+.div6 {
+    background-color: rgb(217, 255, 0);
+    grid-column: 1/ span 3;
+}
+
+.div7 {
+    background-color: rgb(0, 162, 255);
+    grid-column: 1/-1;
+}
+
+
+/* gird end */
+
+
+/* PORTFOLIO SECTION START */
+
+.portfolio-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr ;
+    row-gap:10px ;
+    background-color: aquamarine;
+   justify-items: center;
+}
+.name{
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3px;
+    padding: 10px;
+    font-size: 20px;
+   
+   
+}
+
+
+/* portfolio section end */
+
+
+/* blog section start */
+.blog-container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-items: center;
+  
+}
+.blog-title{
+    padding: 30px;
+    text-align: center;
+    background-color:#ccc;
+    font-size: 50px;
+}
+
+
+
+
+/* blog section end */
+
+
+/*footer start*/
+footer{
+    position:relative;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(44, 42, 42);
+    color: #fff;
+    width: 100%;
+    
+
+}
+.name h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.text p{
+    width: 700px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    top: 3px;      
+}
+.icon i{
+    font-size: 30px;
+    position: relative;
+    top: 2px;
+    padding: 10px;
+}
+.copy{
+    font-size: 30px;
+    position: relative;
+    top: 2px;
+
+}
+/*footer end*/
+
+
+
+@media(max-width: 768px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ccc;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0px;
+        line-height: 30px;
+    }
+    nav ul li {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: rgb(4, 59, 25);
+    }
+    #check:checked~ul {
+        left: 0;
+    }
+    .about-content {
+        grid-column: 1/4;
+        padding: 0px 10px;
+    }
+    .about-image {
+        grid-column: 2/3;
+    }
+   
+    .portfolio-container{
+        grid-template-columns: auto;
+        justify-content: center;
+      }
+      .blog-setion .blog-container .blog-item{
+      
+      text-align: center;
+     
+      }
+      .blog-setion .blog-container .blog-item article{
+       
+        width: 300px;
+      }
+     
+
+      .blog-container{
+        grid-template-columns:auto;
+        background-color: blue;
+      }
+     
+    
+}
+.contact-section{
+    padding: 20px 0px;
+    border-top: 1px solid #ddd;
+    background-color: rgb(240, 233, 233);
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(2,auto);
+    align-items: center;
+    justify-content:space-around;
+}
+.contact-map{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.contact-form{
+    height: 330px;
+    width: 400px;
+    border: 1px solid black;
+    background-color: rgb(235, 233, 233);
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(5,auto);
+    justify-items: center ;
+}
+.contact-form p{  font-weight: bold;
+    grid-column: 2 / 4;
+}
+.contact-form .form-name{
+    grid-column: 1 / 3;
+}
+.contact-form .form-lastname{
+    grid-column: 3 / 5 ;
+}
+.contact-form .form-phone{
+    grid-column: 1 / 3;
+    grid-row: 3 / span 1;
+}
+.contact-form .form-mail{
+    grid-column: 3 / 5;
+}
+.contact-form .form-msg{
+    grid-column: 1/span 5;
+}
+.contact-form .submitForm{
+    grid-column: 2/ 4;
+    width: 100px;
+}
+
